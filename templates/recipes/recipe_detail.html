@@ -28,7 +28,7 @@
     <!-- Изображение рецепта -->
     <div class="col-lg-6 mb-4">
       <div class="sticky-top" style="top: 100px;">
-        {% if recipe.image %}
+      {% if recipe.image %}
         <div class="position-relative">
           <img src="{% static 'recipes/' %}{{ recipe.image }}" class="img-fluid rounded-4 shadow-lg w-100" 
                alt="{{ recipe.title }}" style="max-height: 500px; object-fit: cover;">
@@ -46,7 +46,7 @@
             <p>Изображение отсутствует</p>
           </div>
         </div>
-        {% endif %}
+      {% endif %}
       </div>
     </div>
 
@@ -128,7 +128,7 @@
                 <i class="fas fa-sync-alt me-1"></i>Пересчитать
               </button>
             </div>
-          </form>
+      </form>
         </div>
       </div>
 
@@ -141,7 +141,7 @@
         </div>
         <div class="card-body">
           <ul class="list-group list-group-flush" id="ingredients-list">
-            {% for ing in ingredients %}
+        {% for ing in ingredients %}
             <li class="list-group-item d-flex justify-content-between align-items-center border-0 py-2">
               <span>
                 <i class="fas fa-check-circle text-success me-2"></i>
@@ -153,8 +153,8 @@
                 {{ ing.amount }}
               </span>
             </li>
-            {% endfor %}
-          </ul>
+        {% endfor %}
+      </ul>
         </div>
       </div>
 

@@ -44,45 +44,45 @@
           <label class="form-label fw-semibold">
             <i class="fas fa-tags me-1"></i>Категория
           </label>
-          <select name="category" class="form-select">
-            <option value="">Все категории</option>
-            {% for cat in categories %}
+      <select name="category" class="form-select">
+        <option value="">Все категории</option>
+        {% for cat in categories %}
               <option value="{{ cat.id }}" {% if selected_category == cat.id|stringformat:'s' %}selected{% endif %}>
                 {{ cat.name }}
               </option>
-            {% endfor %}
-          </select>
-        </div>
+        {% endfor %}
+      </select>
+    </div>
         
         <!-- Главный ингредиент -->
         <div class="col-md-4">
           <label class="form-label fw-semibold">
             <i class="fas fa-apple-alt me-1"></i>Главный ингредиент
           </label>
-          <select name="ingredient" class="form-select">
+      <select name="ingredient" class="form-select">
             <option value="">Любой ингредиент</option>
-            {% for ing in ingredients %}
+        {% for ing in ingredients %}
               <option value="{{ ing.id }}" {% if selected_ingredient == ing.id|stringformat:'s' %}selected{% endif %}>
                 {{ ing.name }}
               </option>
-            {% endfor %}
-          </select>
-        </div>
+        {% endfor %}
+      </select>
+    </div>
         
         <!-- Способ приготовления -->
         <div class="col-md-4">
           <label class="form-label fw-semibold">
             <i class="fas fa-fire me-1"></i>Способ приготовления
           </label>
-          <select name="method" class="form-select">
-            <option value="">Любой способ</option>
-            {% for val, name in methods %}
+      <select name="method" class="form-select">
+        <option value="">Любой способ</option>
+        {% for val, name in methods %}
               <option value="{{ val }}" {% if selected_method == val %}selected{% endif %}>
                 {{ name }}
               </option>
-            {% endfor %}
-          </select>
-        </div>
+        {% endfor %}
+      </select>
+    </div>
         
         <!-- Кнопка фильтрации -->
         <div class="col-md-4 d-flex align-items-end">
@@ -134,8 +134,8 @@
             <i class="fas fa-times me-1"></i>Сбросить
           </a>
         </div>
-      </div>
-    </form>
+    </div>
+  </form>
   </div>
 
   <!-- Результаты поиска -->
